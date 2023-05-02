@@ -30,12 +30,14 @@
     :custom
     (centaur-tabs-set-icons t)
     (centaur-tabs-set-modified-marker t)
-    (centaur-tabs-modified-marker "⚠")
     (centaur-tabs-cycle-scope 'tabs)
     :config
     (progn
       (unless (daemonp)
-        (setq centaur-tabs-set-bar tabs-selected-tab-bar))
+        (setq centaur-tabs-set-bar tabs-selected-tab-bar)
+        (setq centaur-tabs-height tabs-height)
+        (setq centaur-tabs-label-fixed-length tabs-label-fixed-length)
+        (setq centaur-tabs-modified-marker tabs-modified-marker))
       (when tabs-headline-match
         (centaur-tabs-headline-match))
       (if tabs-group-by-project

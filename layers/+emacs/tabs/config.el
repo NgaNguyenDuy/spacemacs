@@ -44,3 +44,15 @@ Calls (tabs-headline-match)"
 (spacemacs|defc tabs-auto-hide-delay 2
   "Tabs auto hide delay in seconds."
   '(float))
+
+(spacemacs|defc tabs-height 22
+  "Tabs default height"
+  '(int))
+
+(spacemacs|defc tabs-modified-marker "⚠"
+  "Tabs default modified-marker"
+  '(string))
+
+(spacemacs|defc tabs-label-fixed-length 0
+  "Tabs's label fixed default length"
+  '(int))
