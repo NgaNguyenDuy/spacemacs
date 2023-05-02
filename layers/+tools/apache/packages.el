@@ -1,8 +1,8 @@
-;;; layers.el --- typescript Layer layers File for Spacemacs
+;;; packages.el --- apache layer packages file for Spacemacs.
 ;;
 ;; Copyright (c) 2012-2022 Sylvain Benner & Contributors
 ;;
-;; Author: Chris Bowdon <c.bowdon@bath.edu>
+;; Author: Nathaniel Waisbrot <code@waisbrot.net>
 ;; URL: https://github.com/syl20bnr/spacemacs
 ;;
 ;; This file is not part of GNU Emacs.
@@ -21,9 +21,7 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-(configuration-layer/declare-layer-dependencies '(node javascript prettier))
+(defconst apache-packages '(apache-mode))
 
-(when (boundp 'typescript-backend)
-  (pcase typescript-backend
-    ('lsp (configuration-layer/declare-layer-dependencies '(lsp)))
-    ('tide (configuration-layer/declare-layer-dependencies '(tide)))))
+(defun apache/init-apache-mode()
+  (use-package apache-mode :defer t))

@@ -45,13 +45,13 @@ Calls (tabs-headline-match)"
   "Tabs auto hide delay in seconds."
   '(float))
 
+(defvar tabs-icons t
+  "When non-nil, use all-the-icons to display icons before tab titles.
+all-the-icons is provided by the `spacemacs-visual` layer, which also needs to be active.")
+
 (spacemacs|defc tabs-height 22
   "Tabs default height"
   '(int))
-
-(spacemacs|defc tabs-modified-marker "⚠"
-  "Tabs default modified-marker"
-  '(string))
 
 (spacemacs|defc tabs-label-fixed-length 0
   "Tabs's label fixed default length"
