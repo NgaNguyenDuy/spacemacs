@@ -47,7 +47,9 @@
     :config
     (progn
       (unless (daemonp)
-        (setq centaur-tabs-set-bar tabs-selected-tab-bar))
+        (setq centaur-tabs-set-bar tabs-selected-tab-bar)
+        (setq centaur-tabs-height tabs-height)
+        (setq centaur-tabs-label-fixed-length tabs-label-fixed-length))
       (when tabs-headline-match
         (centaur-tabs-headline-match))
       (if tabs-group-by-project
